@@ -1,0 +1,12 @@
+{
+  "name": "tslint-issue-3188",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "lint": "node tslint.js"
+  },
+  "devDependencies": {
+    "tslint": "^5.7.0",
+    "typescript": "^2.5.2"
+  }
+}
