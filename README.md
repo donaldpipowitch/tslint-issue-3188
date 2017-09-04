@@ -1,3 +1,5 @@
+:bulb: This issue was fixed! See the last commit or the issue for details.
+
 This is an example project to demonstrate: https://github.com/palantir/tslint/issues/3188.
 
 ```sh
