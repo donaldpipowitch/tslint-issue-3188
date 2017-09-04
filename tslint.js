@@ -14,12 +14,11 @@ const program = Linter.createProgram('tsconfig.json');
 const files = Linter.getFileNames(program);
 const linter = new Linter(lintOptions, program);
 
-const results = files.map(file => {
+files.forEach(file => {
   const fileContents = program.getSourceFile(file).getFullText();
-  const configuration = Configuration.findConfiguration(configPath, file)
-    .results;
-  linter.lint(file, fileContents, configuration);
-  return linter.getResult();
+  const conf = Configuration.findConfiguration(configPath, file).results;
+  linter.lint(file, fileContents, conf);
 });
 
-console.log(results);
+const result = linter.getResult();
+console.log(result);
